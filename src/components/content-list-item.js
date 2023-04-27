@@ -4,11 +4,17 @@ const Wrapper = styled.div`
     display: flex;
     padding: 15px;
     margin-bottom: 15px;
-    border: 1px solid black;
+    border-radius: 10px;
     width: 1300px;
-    height: 350px;
+    height: 250px;
+    background-color: #8BC6EC;
+    background: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%), rgba(5,5,5,0.01) 100%;
+    transition: 1s all;
     div {
         height: 200px;
+    }
+    &:last-child {
+        margin-bottom: 70px;
     }
 `;
 
