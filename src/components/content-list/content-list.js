@@ -1,3 +1,5 @@
+import ContentListItem from "../content-list-item/content-list-item";
+
 import { Component } from "react";
 import nextId from "react-id-generator";
 import styled from "styled-components";
@@ -14,16 +16,28 @@ class ContentList extends Component {
         super(props);
         this.state = {
             data: [
-                {user: 'Alisa M', photo: '/img/wen.jpg', theme: 'Cat', message: 'Вау какие котята', id: nextId()}
+                {user: 'Alisa M', photo: '/img/wen.jpg', theme: 'Cat', message: 'Вау какие котята', id: nextId()},
+                {user: 'Roma M', photo: '/img/wen.jpg', theme: 'Keys', message: 'Я нашел чьи то ключи свяжитесь со мной', id: nextId()},
             ]
         }
     }
 
-
     render() {
+
+        const elements = this.state.data.map(item => {
+            const { id, ...itemProps } = item;
+
+            return (
+                <ContentListItem 
+                    key={id}
+                    {...itemProps}
+                />
+            )
+        });
+
         return (
             <Wrapper>
-    
+                {elements}
             </Wrapper>
         )
     }

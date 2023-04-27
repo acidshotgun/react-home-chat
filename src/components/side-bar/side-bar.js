@@ -4,8 +4,6 @@ const Wrapper = styled.section`
     display: flex;
     width: 300px;
     height: 100%;
-    border: 1px solid black;
-    border-bottom: none;
 `;
 
 const SideBar = () => {
