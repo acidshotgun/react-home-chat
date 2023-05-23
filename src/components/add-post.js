@@ -76,7 +76,6 @@ class AddPost extends Component {
     }
 
     render() {
-
         const { user, theme, message } = this.state;
 
         return (
@@ -90,7 +89,6 @@ class AddPost extends Component {
             </Wrapper>
         )
     }
-    
 }
 
 export default AddPost;
